@@ -25,8 +25,7 @@ class ChoiceForPollCreateView(CreateView):
         return get_object_or_404(Poll, pk=poll_pk)
 
 
-    def get_success_url(self):
-        return reverse('poll_view', kwargs={'pk': self.object.poll.pk})
+
 
 
 class ChoiceUpdateView(UpdateView):
