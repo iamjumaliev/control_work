@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Delete mission{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+    <h1>Are you sure want to delete question
+        <a href="{% url 'poll_view' poll.pk %}">{{ poll.question }}</a>?
+    </h1>
+    <form method="POST" action="{% url 'poll_delete' poll.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input type="submit" class = 'btn' value="Confirm"></p>
+        <p><a href="{% url 'index'  %}" class = 'btn'>Cancel</a></p>
+    </form>
+{% endblock %}

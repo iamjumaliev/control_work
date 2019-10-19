@@ -6,9 +6,16 @@
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                 <div class="card">
                     <div class="card-body">
+
                         <h2 class="card-text card-link">
-                            {{ poll.question }}
+                            <a href="{% url 'poll_view' poll.pk%}"> {{ poll.question }} </a>
                         </h2>
+                        <li>
+                            <a href="{% url 'poll_delete' poll.pk %}">Delete question</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'poll_update' poll.pk %}">Update question</a>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -17,4 +24,8 @@
             {% include 'partial/pagination.html' %}
         {% endif %}
     </div>
+    {% endfor %}
+        {% if is_paginated %}
+            {% include 'partial/pagination.html' %}
+        {% endif %}
 {% endblock %}

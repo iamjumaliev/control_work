@@ -19,6 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav w-100">
                     <li class="nav-item">
+                        <a href="{% url 'index' %}" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'poll_create' %}" class="nav-link">Create question</a>
                     </li>
                     {% block menu %}{% endblock %}
                 </ul>
