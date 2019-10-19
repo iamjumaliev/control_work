@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Delete Answer{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+    <h1>Are you sure want to delete answer ?
+    </h1>
+    <form method="POST" action="{% url 'choice_delete' choice.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input type="submit" class = 'btn' value="Confirm"></p>
+        <p><a href="{% url 'index'  %}" class = 'btn'>Cancel</a></p>
+    </form>
+{% endblock %}

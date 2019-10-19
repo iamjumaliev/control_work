@@ -2,7 +2,7 @@
 {% block title %}Create question{% endblock %}
 {% block content %}
    <h1>Create Question</h1>
-   <form method="POST" action="{% url "poll_create" %}">
+   <form method="POST" action="{% url "poll_update" poll.pk%}">
        {% csrf_token %}
              {% include 'partial/partial.html' with button_text="Update" %}
    </form>

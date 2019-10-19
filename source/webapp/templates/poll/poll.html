@@ -2,4 +2,24 @@
 {% block content %}
     <h1 class="my-3">Вопрос:{{ poll.question }}</h1>
     <p>Дата создания: {{ poll.created_at }}</p>
+    <div class="comment-list">
+    <h2>Ответы:</h2>
+        {% for choice in choices %}
+            <div class="choices">
+                <div class="pre">{{ choice.text }}</div>
+                    <p class="choice-links">
+                        <a href="{% url 'choice_update' choice.pk %}">Edit</a>
+                        <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
+                    </p>
+                    <hr>
+            </div>
+                {% empty %}
+                    <p>No answers yet.</p>
+                {% endfor %}
+    </div>
+    <div>
+        <form action="{% url 'poll_choice_create' poll.pk %}" method="POST" id="add_choice">
+            {% include 'partial/partial.html' with button_text='Add' %}
+        </form>
+    </div>
 {% endblock %}
