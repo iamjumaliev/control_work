@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.urls import reverse_lazy, reverse
 
-from webapp.forms import PollForm,ChoiceForm,PollChoiceForm
+from webapp.forms import PollForm,PollChoiceForm
 from webapp.models import Poll
 from django.views.generic import ListView, DeleteView,DetailView,CreateView,UpdateView
 
