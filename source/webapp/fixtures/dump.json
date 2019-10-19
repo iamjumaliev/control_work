@@ -1,0 +1,121 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "Do you believe in god?",
+    "created_at": "2019-10-19T06:01:47.187Z",
+    "updated_at": "2019-10-19T06:01:47.188Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "bla, bla, bla?",
+    "created_at": "2019-10-19T06:02:52.165Z",
+    "updated_at": "2019-10-19T06:02:52.165Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "question 1 ?",
+    "created_at": "2019-10-19T06:03:12.441Z",
+    "updated_at": "2019-10-19T06:03:12.441Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "real question",
+    "created_at": "2019-10-19T06:03:26.640Z",
+    "updated_at": "2019-10-19T06:03:26.640Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "gfif utq",
+    "created_at": "2019-10-19T06:03:40.040Z",
+    "updated_at": "2019-10-19T06:03:40.040Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "text": "la,la,la",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "text": "yes",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "text": "no",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "text": "answer 1",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "text": "real answer",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "text": "yes gfif utq",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 7,
+  "fields": {
+    "text": "maybe",
+    "poll": 5
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$YcMB61PInSpF$jNACQmMW3zjVyPSA8FQPd2WMlsExdpK9qrDgD7EmmOc=",
+    "last_login": "2019-10-19T05:56:52.747Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-19T05:17:47.644Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
