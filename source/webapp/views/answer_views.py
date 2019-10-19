@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic.base import View, TemplateView
 
@@ -24,10 +24,7 @@ class AnswerView(TemplateView):
         poll = Poll.objects.get(pk=kwargs['pk'])
         choice = Choice.objects.get(pk=request.POST.get('box'))
         Answer.objects.create(poll=poll, choice=choice)
-        context = {
-            'poll':poll
-        }
-        return render(request, 'poll/index.html', context=context)
+        return redirect('index')
 
 
 
