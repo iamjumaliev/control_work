@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h2 class="card-text card-link">
+                        <h2 class="card-text card-link" style="height: 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden">
                             <a href="{% url 'poll_view' poll.pk%}"> {{ poll.question }} </a>
                         </h2>
                         <li>
@@ -20,12 +20,10 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+    <div>
         {% if is_paginated %}
             {% include 'partial/pagination.html' %}
         {% endif %}
     </div>
-    {% endfor %}
-        {% if is_paginated %}
-            {% include 'partial/pagination.html' %}
-        {% endif %}
 {% endblock %}
